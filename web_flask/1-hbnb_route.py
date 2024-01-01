@@ -2,11 +2,6 @@
 """
 Starts a Flask web application.
 
-My web application should listens on 0.0.0.0, port 5000.
-
-Routes:
-    /: Displays 'Hello HBNB!'.
-    /hbnb: Displays 'HBNB'.
 """
 
 from flask import Flask
@@ -16,13 +11,13 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    """Displays 'Hello HBNB!'.when called"""
+    """Displays when return 'Hello HBNB!'. its called"""
     return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """Displays 'HBNB'.when called"""
+    """Displays when return 'HBNB'.called"""
     return "HBNB"
 
 
