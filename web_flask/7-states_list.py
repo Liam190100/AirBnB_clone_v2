@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Runs a Flask web application on 0.0.0.0:5000
+Runs a Flask web application
 """
 
 from ../models import storage
@@ -11,14 +11,14 @@ app = Flask(__name__)
 
 @app.route('/states_list', strict_slashes=False)
 def states():
-    """ Returns an HTML page of all States sorted by name """
+    """ Displays HTML page of all States sorted by name """
     states = storage.all("State")
     return render_template('7-states_list.html', states=states)
 
 
 @app.teardown_appcontext
 def teardown(exc):
-    """ Removes the current SQLAlchemy session. """
+    """ This get out the current SQLAlchemy session. """
     storage.close()
 
 
