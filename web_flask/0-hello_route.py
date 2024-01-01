@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Starts a Flask web application.
+This will starts a Flask web appliction 
 """
 from flask import Flask
 
@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    """Displays when its called 'Hello HBNB!'"""
+    """Displays 'Hello HBNB!'when its returned"""
     return "Hello HBNB!"
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port 5000)
+    app.run(host="0.0.0.0",port='5000')
